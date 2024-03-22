@@ -3,12 +3,12 @@ import { useState } from "react";
 import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { deleteContact } from "../../redux/contactOps";
+import { deleteContact } from "../../redux/contactsOps.js ";
 import { useDispatch } from "react-redux";
 import Editor from "../Editor/Editor";
 import PhoneEditor from "../ PhoneEditor/ PhoneEditor";
 
-export default function Contact({ data: { name, phone, id } }) {
+export default function Contact({ data: { name, number, id } }) {
   const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();
 
@@ -38,7 +38,7 @@ export default function Contact({ data: { name, phone, id } }) {
           <BsFillTelephoneFill />
           {isEditing ? (
             <PhoneEditor
-              initialValue={phone}
+              initialValue={number}
               contactId={id}
               onClose={() => setIsEditing(false)}
             />
@@ -49,7 +49,7 @@ export default function Contact({ data: { name, phone, id } }) {
               }}
               className={css.item}
             >
-              {phone}{" "}
+              {number}{" "}
             </p>
           )}
         </span>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import css from "./Editor.module.css";
 import { useDispatch } from "react-redux";
-import { updateContact } from "../../redux/contactOps";
+import { updateContact } from "../../redux/contactsOps.js ";
 
 export default function Editor({ contactId, initialValue, onClose }) {
   const [text, setText] = useState(initialValue);
