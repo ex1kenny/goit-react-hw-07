@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactOps";
+import { addContact } from "../../redux/contactsOps";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import css from "./ContactForm.module.css";

@@ -12,7 +12,7 @@ import ContactList from "../ContactList/ContactList";
 import SpinLoader from "../SpinLoader/SpinLoader";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchContact } from "../../redux/contactOps";
+import { fetchContact } from "../../redux/contactsOps";
 import toast, { Toaster } from "react-hot-toast";
 
 function App() {
